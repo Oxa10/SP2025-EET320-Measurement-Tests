@@ -152,9 +152,6 @@ root = tk.Tk()
 root.title("Mom GUI")  # Set window title
 root.attributes('-fullscreen', True)  # Set to full-screen mode
 
-# Create a vertical scrollbar
-scrollbar = tk.Scrollbar(root, orient=VERTICAL)
-scrollbar.pack(fill=tk.Y,side=tk.LEFT)
 
 
 def exit_fullscreen(event=None):
@@ -166,6 +163,10 @@ def exit_fullscreen(event=None):
 
 # Bind the Escape key to exit full screen
 root.bind("<Escape>", exit_fullscreen)
+
+# Create a vertical scrollbar
+scrollbar = tk.Scrollbar(root, orient=VERTICAL)
+scrollbar.pack(fill=tk.Y,side=tk.LEFT)
 
 # --- Section 1: Favorite Movie/Band Entry ---
 label = tk.Label(root, text="Enter your favorite movie, song, or band:", font=("Arial", 20))
