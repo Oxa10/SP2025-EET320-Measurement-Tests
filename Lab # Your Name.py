@@ -42,3 +42,4 @@ try:
     fungen = rm.open_resource(Fuci[0])
 except IndexError:
     print("Function Generator not connected or powered on")
+
